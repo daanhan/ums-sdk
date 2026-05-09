@@ -1,0 +1,40 @@
+ChinaUMS Payment SDK
+Copyright (c) 2026 ChinaUMS
+
+This project is licensed under the MIT License (see LICENSE file for details).
+
+This software includes third-party dependencies that are distributed under their own licenses:
+
+---
+
+OkHttp (https://square.github.io/okhttp/)
+  Copyright (c) 2019 Square, Inc.
+  Licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
+Jackson JSON Processor (https://github.com/FasterXML/jackson)
+  Copyright (c) 2007-2023 FasterXML, LLC
+  Licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
+Apache Commons Lang (https://commons.apache.org/proper/commons-lang/)
+  Copyright (c) 2001-2023 The Apache Software Foundation
+  Licensed under the Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+
+SLF4J (https://www.slf4j.org/)
+  Copyright (c) 2004-2023 QOS.ch
+  Licensed under the MIT License (https://opensource.org/licenses/MIT)
+
+Logback (https://logback.qos.ch/)
+  Copyright (c) 1999-2023, QOS.ch
+  Licensed under the Eclipse Public License - v 1.0 (https://www.eclipse.org/legal/epl-v10.html)
+
+JUnit 5 (https://junit.org/junit5/)
+  Licensed under the Eclipse Public License - v 2.0 (https://www.eclipse.org/legal/epl-2.0/)
+
+Mockito (https://site.mockito.org/)
+  Copyright (c) 2007-2023 Mockito contributors
+  Licensed under the MIT License (https://opensource.org/licenses/MIT)
+
+---
+
+This product includes software developed by the Apache Software Foundation
+(https://www.apache.org/).
