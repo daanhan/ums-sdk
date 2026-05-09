@@ -3,6 +3,7 @@ name: Java CI with Maven
 on:
   push:
     branches: [ main, master, develop ]
+    tags: [ 'v*' ]
   pull_request:
     branches: [ main, master ]
 
@@ -12,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        java: [ 8, 11, 17 ]
+        java: [ 8 ]
 
     steps:
     - uses: actions/checkout@v4
@@ -39,3 +40,32 @@ jobs:
       with:
         name: coverage-report
         path: target/site/jacoco/
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up JDK 8
+      uses: actions/setup-java@v4
+      with:
+        java-version: 8
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Package with Maven
+      run: mvn clean package --file pom.xml
+
+    - name: List build artifacts
+      run: ls -la target/*.jar
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        name: Release ${{ github.ref_name }}
+        generate_release_notes: true
+        files: |
+          target/*.jar
